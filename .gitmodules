@@ -1,0 +1,3 @@
+[submodule "KNN_color_recognition"]
+	path = KNN_color_recognition
+	url = https://github.com/rkc007/KNN_color_recognition
