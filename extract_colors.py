@@ -9,7 +9,7 @@ import sys
 
 def extract_image_color(im):
     im.convert(mode='RGB')
-    return im.getpixel((0, 0))[:3]
+    return im.getpixel((10, 10))
 
 def extract_all_images_colors(subdir):
     return [
@@ -36,7 +36,7 @@ def main():
         for rgb in color_values:
             if type(rgb) == int:
                 continue # fucky
-            writer.writerow([color_name] + list(rgb))
+            writer.writerow([color_name] + list(rgb)[:3])
     sys.stdout.close()
 
 if __name__ == '__main__':
